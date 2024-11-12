@@ -10,15 +10,7 @@ jobs:
             - uses: actions/setup-node@v4.1.0
             - name: Setup Makefile
               run: make setup
-            - name: Start Makefile   
-              run: make start
-
-    start:
-        runs-on: ubuntu-latest
-        needs: [build]
-
-        steps:
-            - name: Test Makefile  
+            - name: Test Makefile   
               run: make test
             - name: Lint Makefile
               run: make lint
