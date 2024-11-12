@@ -1,0 +1,14 @@
+name: Github-Actions
+
+on: push
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Setup Makefile
+              run: make setup
+            - name: Start Makefile   
+              run: make start
+            - name: Lint Makefile  
+              run: make lint    
